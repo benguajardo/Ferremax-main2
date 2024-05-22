@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+    <br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de transferencia</title>
+</head>
+<body>
+    <div class="container">
+        <h1>DATOS DE TRANSFERENCIA</h1>
+        <br>
+        <div class="row">
+            <div class="col md-6">
+                <div>
+                    <span>RUT:</span>
+                    <span>11.111.111-1</span>
+                </div>
+                <div>
+                    <span>N° Cuenta:</span>
+                    <span>1111111111-1 </span>
+                </div>
+                <div>
+                    <span>Banco:</span>
+                    <span>BCI</span>
+                </div>
+                <div>
+                    <span>Tipo de cuenta:</span>
+                    <span>BCI</span>
+                </div>
+                <div>
+                    <span>Correo:</span>
+                    <span>ventas@ferremas.cl</span>
+                </div>
+                <div>
+                    <span>Monto:</span>
+                    <span>$11.990</span>
+                </div>
+                <div>
+                    <h5>Tiempo máximo de respuesta: 48 horas</h5>
+                </div>
+            </div>
+            <div class="col md-2">
+
+                <div>
+                    <br>
+                    <button style="background-color: #2E7D32; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Adjuntar comprobante</button>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</body>
+</html>
+
+{% endblock %}

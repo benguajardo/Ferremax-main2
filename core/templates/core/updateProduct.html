@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+        <div class="container"> 
+            <div class="row">
+
+            <div class="col-6">
+    
+                <div class="container">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <table>
+                            {{ form | crispy }}
+                        </table>
+                        <input type="submit" class="btn btn-warning " value="Actualizar producto">
+                        <a href="{% url 'shop' %}" class="btn btn-dark ">Volver</a>
+                        <a href="{% url 'deleteProduct' producto.id %}" class="btn btn-danger ">Eliminar producto</a>
+                    </form>
+                    
+                    <h3>{{ msj }}</h3>
+                </div>
+            </div>
+            <div class="col-6">
+    
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        {% if producto.imagen %}
+                            <img class="img-fluid w-100" src="../../../media/{{ producto.imagen }}" alt="">
+                        {% else %}
+                            <img class="img-fluid w-100" src="{% static 'core/img/no_image.png' %}" alt="">
+                        {% endif %}
+                        
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-info-circle"></i></a>
+                        </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">{{ producto.nombre }}</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>${{ producto.precio }}</h5>
+                            <h6 class="text-muted ml-2"><del>Descuento</del></h6>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

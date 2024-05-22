@@ -1,0 +1,86 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ADMINISTRACION</h1>
+        <div class="row">
+            <div class="col md-6">
+                <div>
+                    <h3>Informe de desempeño de tienda</h3>
+                    <table style="width: 100%; border-color: black">
+                        <thead>
+                            <tr style="background-color: rgba(255, 187, 0, 0.61);">
+                                <th>AÑO  </th>
+                                <th>|| DIA </th>
+                                <th>|| MES </th>
+                                <th>|| MONTO NETO </th>
+                                <th>|| IVA </th>
+                                <th>|| TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: rgba(255, 210, 85, 0.603);">
+                                <td>2024</td>
+                                <td>31</td>
+                                <td>Enero</td>
+                                <td>$1.000.000</td>
+                                <td>$190.000</td>
+                                <td>$1.190.000</td>
+                            </tr>
+                            <tr style="background-color: rgba(255, 187, 0, 0.61);">
+                                <td>2024</td>
+                                <td>29</td>
+                                <td>Febrero</td>
+                                <td>$1.000.000</td>
+                                <td>$190.000</td>
+                                <td>$1.190.000</td>
+                            </tr>
+                            <tr style="background-color: rgba(255, 210, 85, 0.603);">
+                                <td>2024</td>
+                                <td>31</td>
+                                <td>Marzo</td>
+                                <td>$1.000.000</td>
+                                <td>$190.000</td>
+                                <td>$1.190.000</td>
+                            </tr>
+                            <tr style="background-color: rgba(255, 187, 0, 0.61);">
+                                <td>2024</td>
+                                <td>30</td>
+                                <td>Abril</td>
+                                <td>$1.000.000</td>
+                                <td>$190.000</td>
+                                <td>$1.190.000</td>
+                            </tr>
+                            <tr style="background-color: rgba(255, 210, 85, 0.603);">
+                                <td>2024</td>
+                                <td>16</td>
+                                <td>Mayo</td>
+                                <td>$1.000.000</td>
+                                <td>$190.000</td>
+                                <td>$1.190.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <center>
+                        <br><br>
+                        <button style="background-color: rgb(255, 208, 0); color: black; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Generar informe</button>
+                        <br><br>
+                        <button style="background-color: rgb(255, 208, 0); color: black; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Volver al inicio</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

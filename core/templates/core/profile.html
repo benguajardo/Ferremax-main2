@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <div class="container">
+        <button style="background-color: rgb(255, 208, 0); color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ver mis pedidos</button>
+        <button style="background-color: rgb(255, 208, 0); color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ver mis consultas</button>
+        <h1>Mi Perfil</h1>
+        <div class="row">
+            <div>
+                <img src="https://cdn-icons-png.freepik.com/256/1144/1144760.png?semt=ais_hybrid" alt="">
+            </div>
+            <div class="col md-6">
+                <div>
+                    <span>Nombres:</span>
+                    <span>Galileo Galilei</span>
+                </div>
+                <div>
+                    <span>Apellidos:</span>
+                    <span>Di Mondo </span>
+                </div>
+                <div>
+                    <span>Edad:</span>
+                    <span>28</span>
+                </div>
+                <div>
+                    <span>Correo Electrónico:</span>
+                    <span>galigali@xmayor.com</span>
+                </div>
+                <div>
+                    <span>Numero:</span>
+                    <span>+56 9 2355 8258</span>
+                </div>
+                <div>
+                    <span>Empresa o cliente:</span>
+                    <span>FierritosXmayor</span>
+                </div>
+                <div>
+                    <span>Direccion:</span>
+                    <span>Avenida siempre viva, 88</span>
+                </div>
+                <div>
+                <a href="{% url 'modificarPerfil' %}">
+                    <button style="background-color: rgb(255, 208, 0); color: black; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Editar perfil</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
